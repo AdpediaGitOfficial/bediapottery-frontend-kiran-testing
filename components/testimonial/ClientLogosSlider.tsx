@@ -15,6 +15,9 @@ import { Subtitle, Title } from "../ui";
 const clientLogos = [
   // --- Your Prioritized Order ---
   { name: "LinkedIn", src: "/images/clients/LinkedIn.png" },
+  { name: "EY", src: "/images/clients/ey.png" },
+  { name: "Caterpillar", src: "/images/clients/caterpillar.png" },
+  { name: "Sephora", src: "/images/clients/sephora.png" },
   { name: "kayali", src: "/images/clients/kayali.jpeg" },
   { name: "HUDA Beauty", src: "/images/clients/HUDA-beauty.jpg" },
   // { name: "Chalhoub Group", src: "/images/clients/ch2m.png" },
