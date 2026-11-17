@@ -10,6 +10,7 @@ import { validateEmail,validatePassword } from "@/utils/validation";
 import { loginUser } from "@/services/authService";
 import { useAuthStore } from "@/store/authStore";
 import { syncGuestCartToServer } from "@/utils/guestCart";
+import { getSafeReturnUrl } from "@/utils/safeReturnUrl";
 import FormPasswordInput from "./FormPasswordInput";
 
 interface LoginFormData {
@@ -155,10 +156,7 @@ const LoginForm = () => {
       // reset form
       setFormData(initialFormData);
 
-      const destination =
-        returnUrl.startsWith("/") && !returnUrl.startsWith("//")
-          ? returnUrl
-          : "/";
+      const destination = getSafeReturnUrl(returnUrl);
 
       if (destination === "/checkout") {
         localStorage.setItem("checkoutCartStep", "2");

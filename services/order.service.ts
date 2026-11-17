@@ -142,7 +142,7 @@ export async function getOrderById(
     useAuthStore.getState().user?.token || null;
 
   const res = await fetch(
-    `${API_BASE_URL}/workshop/order/${orderId}`,
+    `${API_BASE_URL}/workshop/order/${encodeURIComponent(orderId)}`,
     {
       method: "GET",
       headers: {

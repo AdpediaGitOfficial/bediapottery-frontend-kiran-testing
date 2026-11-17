@@ -46,7 +46,7 @@ export async function getCategoryData(
   assertApiBaseUrl();
 
   const res = await fetch(
-    `${API_BASE_URL}/workshop/byCategory?slug=${slug}`,
+    `${API_BASE_URL}/workshop/byCategory?slug=${encodeURIComponent(slug)}`,
     {
       method: "GET",
       headers: {

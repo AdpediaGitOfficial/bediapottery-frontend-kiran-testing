@@ -87,7 +87,7 @@ function assertApiBaseUrl() {
 export async function getWorkshopData(slug: string): Promise<WorkshopItem> {
   assertApiBaseUrl();
 
-  const res = await fetch(`${API_BASE_URL}/workshop/bySlug/${slug}`, {
+  const res = await fetch(`${API_BASE_URL}/workshop/bySlug/${encodeURIComponent(slug)}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

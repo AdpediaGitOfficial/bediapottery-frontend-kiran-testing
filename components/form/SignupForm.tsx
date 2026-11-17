@@ -20,6 +20,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { registerUser } from "@/services/authService";
 import { useAuthStore } from "@/store/authStore";
 import { syncGuestCartToServer } from "@/utils/guestCart";
+import { getSafeReturnUrl } from "@/utils/safeReturnUrl";
 
 const initialFormData: SignupFormData = {
   name: "",
@@ -124,10 +125,7 @@ const SignupForm = () => {
       // reset form
       setFormData(initialFormData);
 
-      const destination =
-        returnUrl.startsWith("/") && !returnUrl.startsWith("//")
-          ? returnUrl
-          : "/";
+      const destination = getSafeReturnUrl(returnUrl);
 
       if (destination === "/checkout") {
         localStorage.setItem("checkoutCartStep", "2");
