@@ -56,6 +56,7 @@ export default function GoogleReviewsHeader({
   return (
     <div
       className="
+        relative
         bg-secondary-dark
         p-6
         lg:mb-12 mb-6
@@ -157,6 +158,11 @@ export default function GoogleReviewsHeader({
           </p>
         </div>
       </div>
+
+      {/* Centered label */}
+      <p className="text-center text-lg font-bold uppercase text-gray-700 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:text-xl">
+        Top Rated Pottery Studio
+      </p>
     </div>
   );
 }
