@@ -8,7 +8,6 @@ const features = [
   {
     icon: Award,
     label: 'Top-Rated Pottery Studio',
-    bold: true,
   },
   {
     icon: Gift,
@@ -42,11 +41,7 @@ export default function FeatureScroller() {
                   <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <Icon size={24} />
                   </div>
-                  <span
-                    className={`text-sm text-gray-900 ${
-                      feature.bold ? 'font-bold' : 'font-medium'
-                    }`}
-                  >
+                  <span className="text-sm font-medium text-gray-900">
                     {feature.label}
                   </span>
                 </div>
