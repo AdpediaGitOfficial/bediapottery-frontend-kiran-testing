@@ -49,6 +49,7 @@ const clientLogos = [
   { name: "11", src: "/images/clients/11.png" },
   { name: "12", src: "/images/clients/12.png" },
   { name: "13", src: "/images/clients/13.png" },
+  { name: "Rugby School Dubai", src: "/images/clients/rugby-school-dubai.jpg" },
   { name: "inc", src: "/images/clients/inc.png" },
   { name: "boston", src: "/images/clients/boston.png" },
   { name: "forsite", src: "/images/clients/forsite.jpeg" },
