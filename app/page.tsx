@@ -1,6 +1,7 @@
 import HeroSection from '@/components/sections/HeroSection'
 import FeatureScroller from '@/components/sections/FeatureScroller'
 import TestimonialsSection from '@/components/testimonial/TestimonialsSection'
+import ClientLogosSlider from '@/components/testimonial/ClientLogosSlider'
 import { getHeroSlides } from '@/services/hero.service'
 import LocationSection from '@/components/common/LocationSection'
 import TwoColumnSection from '@/components/sections/TwoColumnSection'
@@ -83,6 +84,7 @@ export default async function Home() {
           imagePosition={workshopPageData.potteryWheel.imagePosition}
         />
       </div>
+      <ClientLogosSlider />
       <TestimonialsSection />
       <LocationSection/>
     </main>
